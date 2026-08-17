@@ -45,7 +45,6 @@ const collections = [
     desc: "Campaign and collection direction",
     images: [
       "Minimal Khaddar/32a5ef254389901.6a82be6e87f60.jpg",
-      "Minimal Khaddar/campaign.jpg",
     ],
   },
   {
