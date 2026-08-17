@@ -71,3 +71,20 @@ body{background:radial-gradient(circle at 18% 8%,rgba(143,74,92,.08),transparent
 /* Mobile full-view correction */
 @media(max-width:720px){.lightbox{position:fixed;inset:0}.lightbox[open]{display:flex;align-items:center;justify-content:center;width:100vw;height:100dvh;padding:64px 10px 46px}.lightbox img{display:block;width:auto;height:auto;max-width:calc(100vw - 20px);max-height:calc(100dvh - 120px);object-fit:contain}.lightbox-close{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:3}.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3}.lightbox-prev{left:8px;margin-left:0}.lightbox-next{right:8px;margin-right:0}#lightbox-caption{position:absolute;left:10px;right:10px;bottom:14px;z-index:3}.lightbox-close:hover{transform:translateX(-50%) translateY(-2px)}.lightbox-prev:hover,.lightbox-next:hover{transform:translateY(calc(-50% - 2px))}}
 @media(max-width:420px){.lightbox[open]{padding-left:6px;padding-right:6px}.lightbox img{max-width:calc(100vw - 12px);max-height:calc(100dvh - 116px)}.lightbox-prev{left:6px}.lightbox-next{right:6px}}
+
+/* Always-visible mobile lightbox navigation */
+@media(max-width:720px){
+  .lightbox[open]{padding:66px 8px calc(88px + env(safe-area-inset-bottom));isolation:isolate}
+  .lightbox img{position:relative;z-index:1;max-width:calc(100vw - 16px);max-height:calc(100dvh - 166px - env(safe-area-inset-bottom))}
+  .lightbox-prev,.lightbox-next{top:auto;bottom:calc(20px + env(safe-area-inset-bottom));width:64px;height:52px;margin:0;border:2px solid rgba(255,255,255,.9);border-radius:999px;background:#f7f3ea;color:#1d2425;font-size:25px;font-weight:700;line-height:1;box-shadow:0 8px 28px rgba(0,0,0,.45);transform:none;z-index:10;-webkit-tap-highlight-color:transparent}
+  .lightbox-prev{left:calc(50% - 76px)}
+  .lightbox-next{right:calc(50% - 76px)}
+  .lightbox-prev:hover,.lightbox-next:hover,.lightbox-prev:active,.lightbox-next:active{transform:scale(.96);background:var(--accent);border-color:#fff;color:#fff}
+  .lightbox-close{z-index:10;background:#f7f3ea;color:#1d2425;border:2px solid rgba(255,255,255,.9);box-shadow:0 6px 22px rgba(0,0,0,.4)}
+  #lightbox-caption{bottom:calc(78px + env(safe-area-inset-bottom));z-index:10;text-shadow:0 1px 5px #000}
+}
+@media(max-width:360px){
+  .lightbox-prev,.lightbox-next{width:58px;height:48px;bottom:calc(16px + env(safe-area-inset-bottom))}
+  .lightbox-prev{left:calc(50% - 68px)}
+  .lightbox-next{right:calc(50% - 68px)}
+}
