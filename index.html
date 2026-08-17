@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Seerat Fatima - fashion and textile designer." />
+    <title>Seerat Fatima - Designer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="nav">
+      <a class="wordmark" href="#top">SF<span>R</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme" aria-label="Toggle colour theme">◐</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Independent designer - Pakistan</p>
+          <h1>Seerat<br /><em>Fatima</em></h1>
+          <p class="intro">Fashion &amp; textile design informed by colour, ornament and the quiet beauty of craft.</p>
+          <a class="round-link" href="#work"><span>Explore<br />the work</span><b>&darr;</b></a>
+        </div>
+        <div class="hero-art reveal" aria-label="A fashion colour and material study">
+          <img src="assets/main image.png" alt="Seerat Fatima featured portfolio image" />
+          <div class="frame"></div>
+          <p class="vertical">PORTFOLIO - 2026</p>
+        </div>
+        <p class="hero-note">Making visual stories<br />for garments that feel<br />like keepsakes.</p>
+      </section>
+
+      <section class="statement" id="about">
+        <p class="section-label">01 - ABOUT</p>
+        <div>
+          <h2>I design with a love for <em>detail</em> - the kind you notice slowly.</h2>
+          <p class="body-copy">Seerat Fatima is a designer working across fashion, textile and visual direction. Her process begins with research and develops through silhouettes, surface detail, palettes and carefully considered presentation.</p>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="work-heading">
+          <p class="section-label">02 - SELECTED WORK</p>
+          <p>Collections, concepts &amp; visual studies</p>
+        </div>
+        <div class="collection-intro">
+          <h2>Open a collection,<br /><em>enter the world.</em></h2>
+          <p>Every supplied visual lives in the archive. Select a story to view the complete edit.</p>
+        </div>
+        <div class="collections" id="collections"></div>
+      </section>
+
+      <section class="practice">
+        <p class="section-label">03 - PRACTICE</p>
+        <ul>
+          <li><span>01</span> Fashion design</li>
+          <li><span>02</span> Textile &amp; surface design</li>
+          <li><span>03</span> Collection development</li>
+          <li><span>04</span> Research &amp; mood boards</li>
+          <li><span>05</span> Visual direction</li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact">
+        <p class="section-label">04 - LET'S WORK TOGETHER</p>
+        <h2>Have a story<br />to <em>dress?</em></h2>
+        <a class="email" href="mailto:seeratfatima@gmail.com">Start a conversation <span>&nearr;</span></a>
+      </section>
+    </main>
+
+    <dialog class="gallery" id="gallery" aria-label="Collection gallery">
+      <div class="gallery-bar">
+        <button class="gallery-close gallery-back" type="button" aria-label="Back to portfolio">Back</button>
+        <p id="gallery-title"></p>
+        <span id="gallery-count"></span>
+        <div class="gallery-actions" aria-label="Collection navigation">
+          <button class="gallery-prev" type="button" aria-label="Previous collection">&larr;</button>
+          <button class="gallery-next" type="button" aria-label="Next collection">&rarr;</button>
+        </div>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </dialog>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Full image view">
+      <button class="lightbox-close" type="button" aria-label="Close full image">Close</button>
+      <button class="lightbox-prev" type="button" aria-label="Previous image">&larr;</button>
+      <img id="lightbox-image" alt="" />
+      <button class="lightbox-next" type="button" aria-label="Next image">&rarr;</button>
+      <p id="lightbox-caption"></p>
+    </dialog>
+
+    <footer>
+      <span>2026 Seerat Fatima</span>
+      <span>Designed with intention</span>
+      <a href="#top">Back to top &uarr;</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
